@@ -96,6 +96,7 @@ accuracy_person=(correct/20)*100;
 | Accuracy(person) | 80%   | 80%   | 80%   | 80%   |
 
 ## Simulation result
+Clasify 10 wav files in "other data":  
 | .wav     | Length(frame) | Result |
 |----------|---------------|--------|
 | 006604-2 | 913           | 0      |
@@ -106,3 +107,5 @@ accuracy_person=(correct/20)*100;
 | U99176-2 | 1070          | 0      |
 | W05597-2 | 527           | 1      |
 | W12303-2 | 935           | 1      |
+| W24580-2 | 496           | 0      |
+| W34913-2 | 770           | 1      |
