@@ -2,7 +2,8 @@
 KNN (K-Nearest Neighbors) algorithm can be used for vocal cord disorders by analyzing the acoustic properties of voice signals.
 ## MFCC feature extraction
 The MFCC feature extraction technique basically includes windowing the signal, applying the DFT, taking the log of the magnitude, and then warping the frequencies on a Mel scale, followed by applying the inverse DCT.  
-![MFCC](https://www.mathworks.com/help/examples/audio_wavelet/win64/SpeakerIdentificationUsingPitchAndMFCCExample_01.png)
+![MFCC](https://www.mathworks.com/help/examples/audio_wavelet/win64/SpeakerIdentificationUsingPitchAndMFCCExample_01.png)  
+
 In this project, we need to use mfcc_v2.m to produce 13-dimensional MFCC, set cep_size = 12 means the dimension = 13.  
 ```sh
 % set constants begin %
@@ -20,3 +21,5 @@ ceplifter=22;
 cep_size=12;  %12表示是取13維
 static_feature_size=cep_size+1;%c1-c12 plus c0%
 ```
+## Linking and labeling training and teating data
+Here I used label_person.m to divide the data into with disease or without the disease (normal), with disease labeled as 1 and normal labeled as 0.  
