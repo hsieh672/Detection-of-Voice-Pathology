@@ -35,5 +35,5 @@ train_sick_path=[file_path '/train/sick'];
 test_nor_path=[file_path '/test/nor'];
 % uncan data converse to Nor data,the label is 1
 test_sick_path=[file_path '/test/sick']; 
-
 ```
+![label](https://github.com/hsieh672/Detection-of-voice-pathology/blob/main/imag/label.png)
