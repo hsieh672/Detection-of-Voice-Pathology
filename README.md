@@ -59,6 +59,12 @@ end
 
 accuracy_frame=(correct/length(predict_label))*100;
 ```
+
+|                  | K=1   | K=3   | K=5   | K=7   |
+|------------------|-------|-------|-------|-------|
+| Accuracy(R=0.3)  | 78.9% | 79.2% | 79.5% | 79.8% |
+| Accuracy(person) | 80%   | 80%   | 80%   | 80%   |
+
 ## Simulation result
 | .wav     | Length(frame) | Result |
 |----------|---------------|--------|
