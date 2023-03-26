@@ -46,4 +46,16 @@ test_sick_path=[file_path '/test/sick'];
 4. Among these k neighbors, count the number of the data points in each category.  
 5. Assign the new data points to that category for which the number of the neighbor is maximum.  
 6. Our model is ready.  
-![KNN](https://miro.medium.com/v2/resize:fit:1182/format:webp/0*elaSSkBa3Gi9H1-x.png)
+![KNN](https://miro.medium.com/v2/resize:fit:1182/format:webp/0*elaSSkBa3Gi9H1-x.png)  
+```sh
+correct=0;
+predict_label=trainedModel3.predictFcn(Data_test(:,2:27));
+
+for k=1:length(predict_label)
+        if predict_label(k,1)==Data_test(k,1)
+            correct=correct+1;
+        end
+end
+
+accuracy_frame=(correct/length(predict_label))*100;
+```
