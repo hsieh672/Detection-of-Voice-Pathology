@@ -46,4 +46,4 @@ test_sick_path=[file_path '/test/sick'];
 4. Among these k neighbors, count the number of the data points in each category.  
 5. Assign the new data points to that category for which the number of the neighbor is maximum.  
 6. Our model is ready.  
-![KNN](https://static.javatpoint.com/tutorial/machine-learning/images/k-nearest-neighbor-algorithm-for-machine-learning2.png)
+![KNN](https://camo.githubusercontent.com/8eeefad773cfeb6cdd39d46cd7e1e0e9da96e44cdccd618f9082f7b0deac1ba5/68747470733a2f2f7374617469632e6a61766174706f696e742e636f6d2f7475746f7269616c2f6d616368696e652d6c6561726e696e672f696d616765732f6b2d6e6561726573742d6e65696768626f722d616c676f726974686d2d666f722d6d616368696e652d6c6561726e696e67322e706e67)
