@@ -47,6 +47,14 @@ test_sick_path=[file_path '/test/sick'];
 5. Assign the new data points to that category for which the number of the neighbor is maximum.  
 6. Our model is ready.  
 ![KNN](https://miro.medium.com/v2/resize:fit:1182/format:webp/0*elaSSkBa3Gi9H1-x.png)  
+
+In real-life medical research, doctors do not study isolated sound frames because it is difficult to determine which individuals are healthy or sick within these frames. Therefore, it is necessary to know the actual number of individuals in order to identify which ones are special sound cases (with results consistently opposite to the test) or general sound cases, and discuss these special cases accordingly. Thus, a conversion of individuals is needed. Firstly, set the threshold value for sound frames to be 0.5, and determine the predicted status of an individual as healthy or sick. Within the normal testing range, when the predicted label is greater than 0.5, it is considered normal (0), and when it is less than 0.5, it is considered sick (1). Within the sick testing range, when the predicted label is greater than 0.5, it is considered sick (1), and when it is less than 0.5, it is considered normal (0). Therefore, there are four possible scenarios:
+
+1. When a test individual is known to be normal (0), and the predicted result is above the threshold of 0.5, it is predicted as normal (0).  
+2. When a test individual is known to be normal (0), and the predicted result is below the threshold of 0.5, it is predicted as sick (1).  
+3. When a test individual is known to be sick (1), and the predicted result is above the threshold of 0.5, it is predicted as sick (1).  
+4. When a test individual is known to be sick (1), and the predicted result is below the threshold of 0.5, it is predicted as normal (0).  
+#### Predict by frame
 ```sh
 correct=0;
 predict_label=trainedModel3.predictFcn(Data_test(:,2:27));
@@ -59,7 +67,28 @@ end
 
 accuracy_frame=(correct/length(predict_label))*100;
 ```
+#### Predict by person
+```sh
+correct_frame=0;
+correct=0;
+i=1;
+number_person=cat(1,number_person3,number_person4);
 
+for m=1:20
+    correct_frame=0; 
+    for n=i:i+number_person(m,1)-1
+        if predict_label(n,1)==Data_test(n,1)
+            correct_frame=correct_frame+1;
+        end
+        i=i+1;
+    end
+    if (correct_frame/number_person(m,1))>0.5
+       correct=correct+1;
+    end
+end   
+
+accuracy_person=(correct/20)*100;
+```
 |                  | K=1   | K=3   | K=5   | K=7   |
 |------------------|-------|-------|-------|-------|
 | Accuracy(R=0.3)  | 78.9% | 79.2% | 79.5% | 79.8% |
