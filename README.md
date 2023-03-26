@@ -22,4 +22,18 @@ cep_size=12;  %12表示是取13維
 static_feature_size=cep_size+1;%c1-c12 plus c0%
 ```
 ## Linking and labeling training and teating data
-Here I used label_person.m to divide the data into with disease or without the disease (normal), with disease labeled as 1 and normal labeled as 0.  
+Here I used label_person.m to divide the data into with disease or without disease (normal), with disease labeled as 1 and normal labeled as 0.  
+```sh
+file_path='C:/Users/Chen Alex/Documents/DSP/PPT/109_1/2020 DSP_Project_II/Dataset/Output/';
+%------------------train data path--------------
+% can data converse to Nor data,the label is 0
+train_nor_path=[file_path '/train/nor'];
+% uncan data converse to Nor data,the label is 1
+train_sick_path=[file_path '/train/sick']; 
+%-----------------test data path----------------
+% can data converse to Nor data,the label is 0
+test_nor_path=[file_path '/test/nor'];
+% uncan data converse to Nor data,the label is 1
+test_sick_path=[file_path '/test/sick']; 
+
+```
