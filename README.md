@@ -36,4 +36,14 @@ test_nor_path=[file_path '/test/nor'];
 % uncan data converse to Nor data,the label is 1
 test_sick_path=[file_path '/test/sick']; 
 ```
-![label](https://github.com/hsieh672/Detection-of-voice-pathology/blob/main/imag/label.png)
+![label](https://github.com/hsieh672/Detection-of-voice-pathology/blob/main/imag/label.png)  
+
+## Classification using K-Nearest Neighbor (KNN) algorithm 
+#### The KNN working can be explained on the basis of the below algorithm:  
+1. Select the number K of the neighbors  
+2. Calculate the Euclidean distance of K number of neighbors  
+3. Take the K nearest neighbors as per the calculated Euclidean distance.  
+4. Among these k neighbors, count the number of the data points in each category.  
+5. Assign the new data points to that category for which the number of the neighbor is maximum.  
+6. Our model is ready.  
+![KNN](https://static.javatpoint.com/tutorial/machine-learning/images/k-nearest-neighbor-algorithm-for-machine-learning2.png)
